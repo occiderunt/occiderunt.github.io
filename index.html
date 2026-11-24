@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>occiderunt — small software, held close</title>
+<meta name="description" content="Occiderunt is a student and developer building local-first, peer-to-peer software: Bling, NET Study Synopsis, Shimondle, and NET Study.">
+<meta name="theme-color" content="#f4f0e7">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="occiderunt">
+<meta property="og:title" content="occiderunt — small software, held close">
+<meta property="og:description" content="Peer-to-peer chat, offline study tools, local models. Free, open source, no accounts.">
+<meta property="og:image" content="https://occiderunt.github.io/assets/og.png">
+<meta property="og:url" content="https://occiderunt.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<script>
+  /* set the theme before paint so there is no flash */
+  (function () {
+    document.documentElement.classList.add("js");
+    try {
+      var saved = localStorage.getItem("occiderunt-theme");
+      if (saved === "night") document.documentElement.dataset.theme = "night";
+      else if (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.dataset.theme = "night";
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Occiderunt",
+  "url": "https://occiderunt.github.io/",
+  "description": "Student and developer building local-first, peer-to-peer software.",
+  "sameAs": ["https://github.com/occiderunt"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head" id="site-head">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Occiderunt, home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="8.5" fill="currentColor"/>
+        <text x="15.5" y="23.5" text-anchor="middle" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="21" font-style="italic" fill="var(--paper)">o</text>
+        <circle cx="25.5" cy="7.5" r="2.6" fill="var(--accent)"/>
+      </svg>
+      <span class="brand-word">occiderunt</span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#smaller">Smaller things</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to night theme" title="Switch theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.4v2.3M12 19.3v2.3M2.4 12h2.3M19.3 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.5A8.6 8.6 0 0 1 9.5 3.6a8.6 8.6 0 1 0 10.9 10.9Z"/></svg>
+      </button>
+      <a class="btn btn-small btn-ghost" href="https://github.com/occiderunt" target="_blank" rel="noopener">
+        <svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span>Student · developer · open source</p>
+        <h1>Small software,<br><em>held close.</em></h1>
+        <p class="lede">I'm Occiderunt. I build apps that run on your own machine and talk only to the people you point them at: peer-to-peer chat, offline study tools, local models. Rust and Tauri, mostly, and a lot of reading.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="https://github.com/occiderunt" target="_blank" rel="noopener">Everything on GitHub</a>
+        </div>
+        <p class="hero-note"><span class="k">now</span> libp2p gossip, agentic tooling, and getting Rust to build on four targets.</p>
+      </div>
+
+      <aside class="facts" aria-label="At a glance">
+        <div class="facts-head"><span class="k">at a glance</span><span class="lamp" aria-hidden="true"></span></div>
+        <dl>
+          <div class="fact"><dt>building</dt><dd>Bling, peer-to-peer chat</dd></div>
+          <div class="fact"><dt>stack</dt><dd>Rust · Tauri · TypeScript · Swift</dd></div>
+          <div class="fact"><dt>ships to</dt><dd>macOS · Windows · Android</dd></div>
+          <div class="fact"><dt>license</dt><dd>MIT and GPL-3.0</dd></div>
+        </dl>
+        <p class="facts-foot">Free to download. Free to read. No account anywhere.</p>
+      </aside>
+    </div>
+  </section>
+
+  <div class="band" aria-label="Principles">
+    <div class="wrap band-grid">
+      <span>peer-to-peer</span>
+      <span>local-first</span>
+      <span>offline</span>
+      <span>open source</span>
+      <span>no accounts</span>
+    </div>
+  </div>
+
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">selected work</p>
+        <h2>Apps with nobody in the middle.</h2>
+        <p class="sub">No subscriptions, no accounts, and no server of mine in the path. The source is open and the installers are free.</p>
+      </div>
+
+      <article class="project" data-rise>
+        <div class="p-body">
+          <p class="p-meta"><span class="p-num">01</span><span>macOS · Windows · Android</span><span>2026</span></p>
+          <h3>Bling</h3>
+          <p class="tag">Chat that goes straight across.</p>
+          <p class="p-desc">A peer-to-peer messenger built on libp2p. Two machines talk over an encrypted connection and there is no room server reading along. Pair once with a QR code and the app remembers the peer, even after a restart.</p>
+          <p class="tags"><span>Rust</span><span>libp2p</span><span>Tauri</span></p>
+          <p class="links">
+            <a class="link-arrow" href="https://occiderunt.github.io/bling/">Visit the site <span aria-hidden="true">↗</span></a>
+            <a class="link-quiet" href="https://github.com/occiderunt/bling">Source</a>
+          </p>
+        </div>
+        <figure class="p-shot">
+          <img src="assets/app-bling.jpg" alt="The Bling window: a room called lobby with two connected peers and a short conversation." width="1800" height="1190" loading="lazy">
+          <figcaption>Bling, a room with two peers and a saved invitation.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" data-rise>
+        <div class="p-body">
+          <p class="p-meta"><span class="p-num">02</span><span>macOS · Windows · Android</span><span>2026</span></p>
+          <h3>NET Study Synopsis</h3>
+          <p class="tag">One event, four witnesses.</p>
+          <p class="p-desc">The four Gospels in parallel columns, one passage at a time, with shared wording lit up between them. 253 pericopes from the Prologue to the Ascension. Keyboard-first on the desktop, swipe-first on the phone, and it reads offline.</p>
+          <p class="tags"><span>Tauri</span><span>TypeScript</span><span>GPL-3.0</span></p>
+          <p class="links">
+            <a class="link-arrow" href="https://net-study.github.io/netstudy-synopsis/">Visit the site <span aria-hidden="true">↗</span></a>
+            <a class="link-quiet" href="https://github.com/NET-Study/netstudy-synopsis">Source</a>
+          </p>
+        </div>
+        <figure class="p-shot">
+          <img src="assets/app-synopsis.jpg" alt="NET Study Synopsis showing the Baptism of Jesus in four parallel columns with shared wording highlighted." width="1800" height="1148" loading="lazy">
+          <figcaption>The Baptism of Jesus, all four accounts, with the echoes lit up.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" data-rise>
+        <div class="p-body">
+          <p class="p-meta"><span class="p-num">03</span><span>macOS · Windows</span><span>2026</span></p>
+          <h3>Shimondle</h3>
+          <p class="tag">A quiet front end for local models.</p>
+          <p class="p-desc">Desktop chat for Ollama with streaming thoughts, model switching, and zero telemetry. The model already runs on your laptop; Shimondle just gets out of its way. Built as shimondle-ai, a small studio for local-first AI.</p>
+          <p class="tags"><span>Rust</span><span>Tauri</span><span>Ollama</span></p>
+          <p class="links">
+            <a class="link-arrow" href="https://shimondle-ai.github.io/">Visit the site <span aria-hidden="true">↗</span></a>
+            <a class="link-quiet" href="https://github.com/shimondle-ai/shimondle">Source</a>
+          </p>
+        </div>
+        <figure class="p-shot">
+          <img src="assets/app-shimondle.jpg" alt="Shimondle mid-answer, with the thinking stream open above the reply." width="1800" height="1205" loading="lazy">
+          <figcaption>Shimondle, thinking out loud before it answers.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" data-rise>
+        <div class="p-body">
+          <p class="p-meta"><span class="p-num">04</span><span>macOS · Windows</span><span>2025</span></p>
+          <h3>NET Study</h3>
+          <p class="tag">A study Bible that feels like paper.</p>
+          <p class="p-desc">The full NET Bible text with reference navigation, highlights and notes right on the page, and instant search across everything you have already read. Built on the public NET Bible API, and it works with the network off.</p>
+          <p class="tags"><span>Desktop</span><span>Offline</span><span>NET Bible API</span></p>
+          <p class="links">
+            <a class="link-arrow" href="https://net-study.github.io/">Visit the site <span aria-hidden="true">↗</span></a>
+            <a class="link-quiet" href="https://github.com/NET-Study/netstudy-mac">Source</a>
+          </p>
+        </div>
+        <figure class="p-shot">
+          <img src="assets/app-netstudy.jpg" alt="NET Study open to John 1, with the book rail on the left and the parchment reading column." width="1800" height="1205" loading="lazy">
+          <figcaption>NET Study on John 1, with the book rail open.</figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="section alt" id="smaller">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">smaller things</p>
+        <h2>Experiments and side quests.</h2>
+        <p class="sub">Not every idea needs a landing page. These live on GitHub, usually one commit and a grin.</p>
+      </div>
+
+      <ul class="things">
+        <li>
+          <a href="https://github.com/occiderunt/Bobthething" target="_blank" rel="noopener">
+            <span class="t-name">Bobthething</span>
+            <span class="t-desc">A stress-relief creature in SwiftUI. Poke him and he does something strange.</span>
+            <span class="t-lang">Swift</span>
+            <span class="t-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/occiderunt/bobwifimath" target="_blank" rel="noopener">
+            <span class="t-name">bobwifimath</span>
+            <span class="t-desc">The ultimate calculator. Powered by BobFi, which is definitely not a thing.</span>
+            <span class="t-lang">JavaScript</span>
+            <span class="t-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/occiderunt/Bobknows..." target="_blank" rel="noopener">
+            <span class="t-name">Bobknows…</span>
+            <span class="t-desc">Bob's all-important advice for life. Ponder it, then forget it.</span>
+            <span class="t-lang">JavaScript</span>
+            <span class="t-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/occiderunt/reef-vellum" target="_blank" rel="noopener">
+            <span class="t-name">reef-vellum</span>
+            <span class="t-desc">A Reef plugin for Vellum AI.</span>
+            <span class="t-lang">TypeScript</span>
+            <span class="t-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-head">
+        <p class="eyebrow">about</p>
+        <h2>Hi, I'm<br><em>Occiderunt.</em></h2>
+      </div>
+      <div class="about-body">
+        <p class="big">Student and developer. I like AI, specifically agentic frameworks: systems that can actually do things, not just talk about them.</p>
+        <p>That interest keeps pulling me down the stack to the parts I find interesting: the network layer, the local model, the file on your disk. Bling exists because a chat app should not need a company in the middle. Synopsis exists because the Gospels are easier to see side by side. Shimondle exists because the model already runs on your laptop.</p>
+        <p>Everything here is free, open source, and built to work without an account. The name is Latin for <em>they fell</em>. Make of that what you will.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section elsewhere" id="elsewhere">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">elsewhere</p>
+        <h2>Find the source.</h2>
+      </div>
+      <div class="links-grid">
+        <a class="big-link" href="https://github.com/occiderunt" target="_blank" rel="noopener">
+          <svg class="gh big-gh" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          <span class="bl-name">GitHub</span>
+          <span class="bl-desc">Every repo, every issue, every release. The code is the point.</span>
+          <span class="bl-go" aria-hidden="true">github.com/occiderunt ↗</span>
+        </a>
+        <a class="big-link" href="https://occiderunt.github.io/f-droid/" target="_blank" rel="noopener">
+          <span class="bl-mark" aria-hidden="true">fd</span>
+          <span class="bl-name">F-Droid</span>
+          <span class="bl-desc">The Occiderunt repository, signed and ready for Android. Bling and Synopsis live here.</span>
+          <span class="bl-go" aria-hidden="true">occiderunt.github.io/f-droid ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="8.5" fill="currentColor"/>
+        <text x="15.5" y="23.5" text-anchor="middle" font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="21" font-style="italic" fill="var(--paper)">o</text>
+        <circle cx="25.5" cy="7.5" r="2.6" fill="var(--accent)"/>
+      </svg>
+      <div>
+        <p class="fb-name">occiderunt</p>
+        <p class="fb-note">occiderunt is Latin for “they fell.”</p>
+      </div>
+    </div>
+    <p class="foot-fine">© <span id="year">2026</span> · Hand-written HTML and CSS. No framework, no analytics, no cookies, no fonts fetched from anywhere.</p>
+    <a class="to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

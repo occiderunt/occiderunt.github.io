@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — this page fell</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root { --paper:#f4f0e7; --ink:#17140f; --muted:#6a6155; --accent:#bf4a2b; --line:rgba(23,20,15,.14); }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#111110; --ink:#f2ede2; --muted:#a79d8d; --accent:#e8764f; --line:rgba(242,237,226,.15); }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: radial-gradient(50% 50% at 70% 0%, rgba(191,74,43,.10), transparent 70%), var(--paper);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 32px;
+  }
+  main { max-width: 520px; }
+  .code { font: 11px/1 ui-monospace, Menlo, monospace; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-weight: 500; font-size: clamp(2.6rem, 8vw, 4.2rem); line-height: .98; letter-spacing: -.02em; margin: 14px 0 18px; }
+  h1 em { color: var(--accent); }
+  p { color: var(--muted); margin: 0 0 28px; }
+  a { display: inline-block; padding: 12px 20px; border-radius: 999px; background: var(--ink); color: var(--paper); text-decoration: none; font-weight: 600; font-size: 14.5px; }
+  a:hover { background: var(--accent); color: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <p class="code">404 · occiderunt</p>
+  <h1>This page<br><em>fell.</em></h1>
+  <p>The address is wrong, or the page moved. Either way, nothing is broken that a link cannot fix.</p>
+  <a href="/">Back to the home page</a>
+</main>
+</body>
+</html>
